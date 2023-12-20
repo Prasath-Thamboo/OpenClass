@@ -1,0 +1,198 @@
+body{
+    margin: 0 ;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+:root{
+    --main-color: white;
+    --second-color: black;
+
+  }
+  
+
+header{
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    transition: .4s;
+    height: 80px;
+}
+header.sticky{
+    background-color: var(--main-color);
+    height: 60px;
+}
+
+header .head-logo img{
+    width: 100px;
+}
+
+header .head{
+    display: flex; 
+    gap: 40px;
+}
+
+header .head li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: black; 
+    padding: 5px;
+    border-radius: 10px;
+}
+
+header .head li a:hover{
+    color: var(--main-color);
+    background: var(--second-color)
+}
+
+header .head li  {
+    list-style: none;
+    
+}
+
+
+.hero{
+    height: 100vh;
+    background-image: url("/Herobg.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-bg{
+    width: 50%;
+    text-align: center;
+    position: relative;
+    top: 500px; 
+}
+
+.hero-bg h1{
+    font-size: 40px;
+}
+.hero-bg button{
+    font-size: 20px;
+    padding: 20px 60px 20px 60px; 
+    text-decoration: none;
+    border: none; 
+    border-radius: 20px;
+    background-color: var(--main-color);
+}
+.hero-bg button a{
+    text-decoration: none;
+}
+.hero-bg h1,button{
+    margin: 0
+}
+
+.skills{
+    padding: 20px;
+    background : brown;
+}
+.skills-main{
+    max-width: 1200px;
+    margin: auto;
+    display: flex; 
+    padding: 20px; 
+    gap: 75px; 
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.skills-main .card i{
+    font-size: 30px;
+    color: red;
+}
+
+.carre {
+    margin: 50px;
+}
+
+.carre .carre-main{
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.carre .carre-main .carre-card{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
+.carre .carre-main .carre-card img{
+   border-radius: 20px 20px 0px 0px;
+}
+.carre .carre-main .carre-card button{
+    padding: 10px 60px 10px 60px; 
+    margin: 20px; 
+    border: none; 
+    border-radius: 10px;
+}
+.carre .carre-main .carre-card button a{
+   text-decoration: none;
+   font-size: 18px;
+   font-weight: 600;
+
+}
+
+.blog .blog-main{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.blog .blog-main .blog-r{
+    width: 50%;
+    padding: 50px; 
+    text-align: justify;
+}
+
+.blog .blog-main .blog-l img{
+    width: 860px;
+}
+
+.faq {
+    max-width: 600px; 
+    margin: auto;
+}
+.faq .faq-main .faq-ques{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.faq .faq-main .faq-ques p{
+    display: none;
+} 
+
+
+
+
+
+
+@media (max-width: 1100px) { 
+    header .head {
+        display:none
+    }
+    .faq .faq-main .faq-ques p{
+        display: none;
+    } 
+    
+    .faq:hover .faq-main .faq-ques:focus p{
+        display: block!important;
+    } 
+    
+    
+    
+
+
+
+}
