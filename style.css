@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 body{
     margin: 0 ;
     padding: 0;
@@ -8,6 +10,7 @@ body{
 :root{
     --main-color: white;
     --second-color: black;
+    --third-color: #DCDCDC;
 
   }
   
@@ -59,17 +62,22 @@ header .head li  {
 
 .hero{
     height: 100vh;
-    background-image: url("/Herobg.png");
+    background-image: url("/g.png");
     background-position: center;
     background-size: cover;
 }
 
 .hero-bg{
-    width: 50%;
+    width: 500px;
+    padding: 30px;
     text-align: center;
     position: relative;
-    top: 500px; 
+    top: 350px;
+    left : 200px;
+    background-color: var(--third-color);
+    border-radius: 20px
 }
+
 
 .hero-bg h1{
     font-size: 40px;
@@ -88,6 +96,8 @@ header .head li  {
 .hero-bg h1,button{
     margin: 0
 }
+
+
 
 .skills{
     padding: 20px;
@@ -141,51 +151,119 @@ header .head li  {
 
 }
 
+.blog{
+    margin: 50px 0 50px 0;
+    background-image: url(/Herobg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+
 .blog .blog-main{
     display: flex; 
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: var(--main-color);
+    width: 550px; 
+    height: 550px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    position : relative; 
+    top: 50px; left: 100px
 }
 
-
-.blog .blog-main .blog-r{
-    width: 50%;
-    padding: 50px; 
-    text-align: justify;
+.blog .blog-main2{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--main-color);
+    width: 550px; 
+    height: 550px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    position : relative; 
+    top: 50px; left: 1200px
 }
 
-.blog .blog-main .blog-l img{
-    width: 860px;
+.blog .blog-main h1{
+    font-size: 27px;
+    text-align: center;
+
+}
+.blog .blog-main p{
+    margin: 40px
+}
+.blog .blog-main2 h1{
+    text-align: center;
+    font-size: 27px;
+}
+.blog .blog-main2 p{
+    margin: 40px
 }
 
 .faq {
-    max-width: 600px; 
+    max-width: 1500px; 
     margin: auto;
+    padding: 50px; 
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
 }
+
+
 .faq .faq-main .faq-ques{
     display: flex;
     flex-direction: column;
     text-align: center;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
 }
 
 .faq .faq-main .faq-ques p{
     display: none;
     transition: .5s;
 
-
 } 
 
+
+
+
+.teams {
+    margin-top: 50px;
+}
+
+.teams .carousel {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.teams h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 40px;
+}
+
 .teams .carousel .card{
-    background: #222;
+    background: #DCDCDC;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
-    overflow: hidden;
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover{
-    background: crimson;
+    background: var(--main-color);
+
 }
 .teams .carousel .card .box{
     display: flex;
@@ -197,54 +275,167 @@ header .head li  {
 .teams .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.teams .carousel .card .text{
+.teams .carousel .card .box .text{
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 600;
     margin: 10px 0 7px 0;
+    color: var(--second-color);
 }
 .teams .carousel .card img{
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid crimson;
+    border: 5px solid var(--second-color);
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
-    border-color: #fff;
+    border-color: var(--second-color);
 }
-.owl-dots{
+
+
+
+
+.contact-form{
+    position: relative;
+    min-height: 50vh;
+    z-index: 0;
+    padding: 30px;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    align-items: center;
+}
+.container{
+    max-width: 800px;
+    margin-top: 0 auto;
+}
+.contact-form h1{
     text-align: center;
-    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 400;
+    color: black;
 }
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid crimson!important;
-    transition: all 0.3s ease;
+.contact-form h2{
+    line-height: 40px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--second-color);
+    text-align: center;
 }
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
+.contact-form .main{
+    position: relative;
+    display: flex;
+    margin: 30px 0;
 }
-.owl-dot.active,
-.owl-dot:hover{
-    background: crimson!important;
+.content{
+    flex-basis: 50%;
+    padding: 3em 3em;
+    background: #fff;
+    box-shadow: 2px 9px 49px -17px rgba(156, 39, 148, 0.1);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.form-img{
+    flex-basis: 50%;
+    background: #f0f4f8;
+    background-size: cover;
+    padding: 40px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    align-items: center;
+    display: grid;
+}
+.form-img img{
+    max-width: 100%;
+}
+.btn,
+button,
+input{
+    border-radius: 35px;
+}
+.btn:hover,
+button:hover{
+    color: var(--third-color);
+    transition: 0.5s ease;
+}
+.contact-form form{
+    margin: 30px 0;
+}
+.contact-form input,
+textarea{
+    outline: none;
+    margin-bottom: 15px;
+    font-stretch: 16px;
+    color: #999;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    background: #fcfcfc;
+    transition: 0.3s ease;
+}
+.contact-form input:focus{
+    background: transparent;
+    border: 1px solid #69275c;
+}
+.contact-form button{
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    background: var(--second-color);
+    font-weight: 600;
+    transition: 0.3s ease;
+    padding: 14px 15px;
+    border: 1px solid var(--second-color);
+
 }
 
 
+@media(max-width:736px){
+    .contact-form .main{
+        flex-direction: column;
+    }
+    .contact-form form{
+        margin-top: 30px;
+        margin-bottom: 10px;
 
+    }
+    .form-img{
+        border-radius: 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        order: 2;
+    }
+    .content{
+        order: 1;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding: 0;
+
+
+    }
+}
 
 
 
 
 @media (max-width: 1100px) { 
+
+    .hero .hero-bg {
+        top: 200px;
+        left: 0;
+        padding: 0 0 20px 0;
+        width: 95%; 
+        margin: auto;
+    }
     header .head {
         display:none
     }
+
+
     .faq .faq-main .faq-ques p{
         display: none;
     } 
@@ -252,10 +443,34 @@ header .head li  {
     .faq:hover .faq-main .faq-ques:focus p{
         display: block!important;
     } 
-    
-    
-    
 
-
+    .blog .blog-main .blog-r{
+        padding: 0; 
+        width: 80%
+    }
+    .blog .blog-main .blog-l img{
+        width: 100%;
+    }
+    .blog .blog-main {
+        width: 100%;
+        padding: 0; 
+        position :static;
+        height: auto
+    }
+    .blog .blog-main2 {
+        width: 100%;
+        padding: 0; 
+        position :static;
+        height: auto
+    }
+    .blog .blog-main2 h1 {
+        padding: 20px;
+    }
+    .blog .blog-main h1 {
+        padding: 20px;
+    }
+    .blog {
+        margin-top: 50px;
+    }
 
 }
