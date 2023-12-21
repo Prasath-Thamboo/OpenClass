@@ -171,7 +171,9 @@ header .head li  {
 
 .faq .faq-main .faq-ques p{
     display: none;
+    transition: .5s;
 } 
+
 
 
 

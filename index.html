@@ -114,17 +114,18 @@
    <section class="faq">
     <div class="faq-main" >
         <div class="faq-ques"  >
-            <h2 onclick="toggle()">Bonjour, voici une question, il faut y répondre</h2>
-            <p id="faq">Voici la réponse à la question posée précedemment, une réponse très intérressante <a href="#"><button>Voir plus</button></a></p>
+            <h2 onclick="toggle('faq1')">Bonjour, voici une question, il faut y répondre</h2>
+            <p id="faq1">Voici la réponse à la question posée précedemment, une réponse très intérressante <a href="#"><button id ="salut">Voir plus</button></a></p>
         </div>
         <div class="faq-ques">
-            <h2 onclick="toggle()">Bonjour, voici une question, il faut y répondre</h2>
-            <p id="faq">Voici la réponse à la question posée précedemment, une réponse très intérressante <a href="#"><button>Voir plus</button></a></p>
+            <h2 onclick="toggle('faq2')">Bonjour, voici une question, il faut y répondre</h2>
+            <p id="faq2">Voici la réponse à la question posée précedemment, une réponse très intérressante <a href="#"><button>Voir plus</button></a></p>
         </div>
         <div class="faq-ques">
-            <h2 onclick="toggle()">Bonjour, voici une question, il faut y répondre</h2>
-            <p id="faq">Voici la réponse à la question posée précedemment, 
+            <h2 onclick="toggle('faq3')">Bonjour, voici une question, il faut y répondre</h2>
+            <p id="faq3">Voici la réponse à la question posée précedemment, 
             une réponse très intérressante 
+
             <a href="#"><button>Voir plus</button></a></p>
         </div>
     </div>
@@ -140,14 +141,19 @@
         header.classList.toggle("sticky", window.scrollY > 0);
     })
     
-    function toggle() {
-    var div = document.getElementById('faq');
+    function toggle(zongi) {
+    var div = document.getElementById(zongi);
     if (div.style.display === 'none') {
       div.style.display = 'block'; 
         } else {
       div.style.display = 'none'; 
         }
     }
+
+    let monBouton = document.getElementById("salut");
+    monBouton.addEventListener("click", () => {
+        console.log("Salutations")
+    })
 
    </script>
 
